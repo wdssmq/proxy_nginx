@@ -31,7 +31,7 @@ APP_DIR=${PRD_DIR}/app
 
 CON_NAME=proxy_nginx
  
-DEBUG=1
+DEBUG=0
 # 删除
 docker rm --force $CON_NAME
 if [ "$DEBUG" -eq "1" ]; then
