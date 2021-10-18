@@ -83,6 +83,8 @@ docker run -it --rm --name certbot \
  -v "${CER_DIR}/log:/var/log/letsencrypt" \
  -v "${APP_DIR}:/var/www" \
  certbot/certbot certonly
+# certonly 为首次申请
+# renew 续期 
 
 # 复制进 nginx/ssl/
 cp -r ${CER_DIR}/etc/archive ${PRD_DIR}/nginx/ssl/
