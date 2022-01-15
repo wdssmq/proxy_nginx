@@ -87,8 +87,10 @@ docker run -it --rm --name certbot \
 # renew 续期 
 
 # 复制进 nginx/ssl/
-cp -r ${CER_DIR}/etc/archive ${PRD_DIR}/nginx/ssl/
-cp -r ${CER_DIR}/etc/live ${PRD_DIR}/nginx/ssl/
+\cp -rf ${CER_DIR}/etc/archive ${PRD_DIR}/nginx/ssl/
+\cp -rf ${CER_DIR}/etc/live ${PRD_DIR}/nginx/ssl/
+
+# 系统可能默认设置 alias cp=’cp -i’
 ```
 
 **修改`${PRD_DIR}/nginx/vhost.ssl.conf`：**
